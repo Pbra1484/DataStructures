@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>310</y>
+      <w>460</w>
+      <h>520</h>
+    </coordinates>
+    <panel_attributes>Timer
+--
+
+--
+-clock_t executionTime;
++Timer()
++void startTimer()
++void stopTimer()
++void resetTimer()
++void displayTimerInformation()
++long getExecutionTimeInMicroseconds()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>220</y>
+      <w>380</w>
+      <h>390</h>
+    </coordinates>
+    <panel_attributes>IntNode
+--
+- nodeData:int
+- nodePointer:IntNode *
+--
++ getNodeData() : int
++ getNodePointer() : IntNode *
++ setNodeData(int stuff) : void
++ setNodePointer(IntNode *) : void
++ IntNode() : constructor
++ IntNode(int value) : constructor
++ IntNode(int value, IntNode * nextNode) : constructor</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
