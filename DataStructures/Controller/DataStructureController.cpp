@@ -31,17 +31,17 @@ void DataStructureController :: testIntArray()
     
     IntNodeArray temp = IntNodeArray(3);
     
-    for(int index = 0; index < 3; index++)
+    for(int index = 0; index < temp.getSize(); index++)
     {
         cout << temp.getFromIndex(index) << " is at spot " << index << endl;
     }
     
-    for(int index = 0; index < 3; index++)
+    for(int index = 0; index < temp.getSize(); index++)
     {
         temp.setAtIndex(index, index);
     }
     
-    for(int index = 0; index < 3; index++)
+    for(int index = 0; index < temp.getSize(); index++)
     {
         cout << temp.getFromIndex(index) << " is at spot " << index << endl;
     }
