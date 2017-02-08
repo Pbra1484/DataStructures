@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		512A1C801E4BA94F004DD62D /* IntNodeArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512A1C7E1E4BA94F004DD62D /* IntNodeArray.cpp */; };
+		512A1C861E4BB278004DD62D /* DataStructureController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512A1C841E4BB278004DD62D /* DataStructureController.cpp */; };
 		518B51401E490F0000F7860D /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 518B513E1E490F0000F7860D /* IntNode.cpp */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,8 @@
 /* Begin PBXFileReference section */
 		512A1C7E1E4BA94F004DD62D /* IntNodeArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNodeArray.cpp; path = Model/IntNodeArray.cpp; sourceTree = "<group>"; };
 		512A1C7F1E4BA94F004DD62D /* IntNodeArray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNodeArray.hpp; path = Model/IntNodeArray.hpp; sourceTree = "<group>"; };
+		512A1C841E4BB278004DD62D /* DataStructureController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = DataStructureController.cpp; path = Controller/DataStructureController.cpp; sourceTree = "<group>"; };
+		512A1C851E4BB278004DD62D /* DataStructureController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = DataStructureController.hpp; path = Controller/DataStructureController.hpp; sourceTree = "<group>"; };
 		518B51321E49047300F7860D /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		518B513E1E490F0000F7860D /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		518B513F1E490F0000F7860D /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
@@ -70,6 +73,8 @@
 		518B513C1E4907DB00F7860D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				512A1C841E4BB278004DD62D /* DataStructureController.cpp */,
+				512A1C851E4BB278004DD62D /* DataStructureController.hpp */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				518B51401E490F0000F7860D /* IntNode.cpp in Sources */,
+				512A1C861E4BB278004DD62D /* DataStructureController.cpp in Sources */,
 				512A1C801E4BA94F004DD62D /* IntNodeArray.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
