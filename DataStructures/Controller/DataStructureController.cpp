@@ -13,15 +13,25 @@
 using namespace std;
 DataStructureController :: DataStructureController()
 {
-    
+    wordNode = Node<string>("");
+    numberNode = Node<int>();
+}
+
+void DataStructureController:: testNodes()
+{
+    cout << "Node contents for Node<string>" <<endl;
+    cout << wordNode.getNodeData() << endl;
+    cout << "Here is the Node<int>" << endl;
+    cout << numberNode.getNodeData() << endl;
 }
 
 void DataStructureController :: start()
 {
     cout << "starting" << endl;
     
-    cout << "Switing to aray testing" << endl;
-    testIntArray();
+    testNodes();
+//    cout << "Switing to aray testing" << endl;
+//    testIntArray();
     cout << "Finished Testing" << endl;
 }
 

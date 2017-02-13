@@ -14,14 +14,14 @@ class Node
 {
 private:
     Type nodeData;
-    Node<Type> *
+    Node<Type> * nodePointer;
 public:
     Node();
     Node(Type nodeData);
     Node(Type data, Node<Type> * next);
     
     void setNodeData(Type data);
-    void setNodePointer(Node<Type> pointer);
+    void setNodePointer(Node<Type> * pointer);
     Type getNodeData();
     Node<Type> * getNodePointer();
 };
@@ -74,7 +74,7 @@ Type Node<Type> :: getNodeData()
 template <class Type>
 Node<Type> * Node<Type> :: getNodePointer()
 {
-    return this->nodPointer;
+    return this->nodePointer;
 }
 
 
