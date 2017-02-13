@@ -17,7 +17,7 @@ IntNodeArray :: IntNodeArray(int size)
     this->front = new IntNode();
     
     
-    for(int index = 0; index < size; index++)
+    for(int index = 1; index < size; index++)
     {
         IntNode * current = new IntNode();
         current->setNodePointer(front);
