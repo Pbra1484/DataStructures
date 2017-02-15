@@ -35,6 +35,7 @@
 		518B51321E49047300F7860D /* DataStructures */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructures; sourceTree = BUILT_PRODUCTS_DIR; };
 		518B513E1E490F0000F7860D /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		518B513F1E490F0000F7860D /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
+		51A4DE341E54E3A00021CF7D /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 				512A1C7E1E4BA94F004DD62D /* IntNodeArray.cpp */,
 				512A1C7F1E4BA94F004DD62D /* IntNodeArray.hpp */,
 				515610F71E523E95000BB98E /* Node.hpp */,
+				51A4DE341E54E3A00021CF7D /* Array.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
