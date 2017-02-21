@@ -23,7 +23,12 @@ public:
     Array();
     Array(int size);
     
-    int getSize();
+    ~Array<Type>();
+    Array<Type>(const Array<Type> & toBeCopied);
+    
+    int getSize() const;
+    Node<Type> * getFront() const;
+    
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
 };
@@ -81,6 +86,30 @@ Type Array<Type> :: getFromIndex(int index)
     value = burrent->getNodeData()
     
     return value;
+}
+
+template <class Type>
+int Array<Type> :: getSize() const
+{
+    return size;
+}
+
+template <class Type>
+Array<Type> :: ~Array()
+{
+    int count = size;
+    Node(type) * remove = front;
+    while(front != nullptr)
+    {
+        front = front->getNodePointer();
+        cout << "Moving to the next node at: " << count << endl;
+        delete remove;
+        cout << "Deleting the old front pointer" << endl;
+        remove = front;
+        cout << "Moving to new sfront pointer" << endl;
+        count--;
+        cout << "Front is at: " << front << " count is: " << count << endl;
+    }
 }
 
 #endif /* Array_h */
