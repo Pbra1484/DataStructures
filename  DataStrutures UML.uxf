@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>280</x>
-      <y>280</y>
+      <x>140</x>
+      <y>300</y>
       <w>300</w>
       <h>170</h>
     </coordinates>
@@ -26,7 +26,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>860</x>
+      <x>790</x>
       <y>40</y>
       <w>380</w>
       <h>180</h>
@@ -49,7 +49,7 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>860</x>
+      <x>790</x>
       <y>290</y>
       <w>280</w>
       <h>170</h>
@@ -69,7 +69,7 @@ group=1</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>840</x>
+      <x>770</x>
       <y>0</y>
       <w>480</w>
       <h>480</h>
@@ -83,7 +83,7 @@ group=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>170</x>
+      <x>100</x>
       <y>570</y>
       <w>370</w>
       <h>410</h>
@@ -107,7 +107,7 @@ group=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1000</x>
+      <x>930</x>
       <y>210</y>
       <w>30</w>
       <h>100</h>
@@ -118,9 +118,9 @@ group=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>640</x>
+      <x>570</x>
       <y>570</y>
-      <w>390</w>
+      <w>490</w>
       <h>410</h>
     </coordinates>
     <panel_attributes>Array&lt;Type&gt;
@@ -131,6 +131,8 @@ group=2</panel_attributes>
 + Array() : constructor
 + Array(int size) : constructor
 
++ ~Array&lt;Type&gt;() : destructor
++ Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy constructor
 + getSize() : int
 + setAtIndex(int index, Type value) : void
 + getFromIndex(int index) : Type
@@ -140,9 +142,9 @@ group=2</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>130</x>
+      <x>60</x>
       <y>520</y>
-      <w>940</w>
+      <w>1040</w>
       <h>490</h>
     </coordinates>
     <panel_attributes>&lt;Type&gt; Array
@@ -154,7 +156,7 @@ group=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>530</x>
+      <x>460</x>
       <y>760</y>
       <w>130</w>
       <h>50</h>
