@@ -95,6 +95,12 @@ int Array<Type> :: getSize() const
 }
 
 template <class Type>
+Node<TYpe> * Array<Type> :: getFront() const
+{
+    return front;
+}
+
+template <class Type>
 Array<Type> :: ~Array()
 {
     int count = size;
@@ -109,6 +115,28 @@ Array<Type> :: ~Array()
         cout << "Moving to new sfront pointer" << endl;
         count--;
         cout << "Front is at: " << front << " count is: " << count << endl;
+    }
+}
+
+template <class Type>
+Array<Type> :: Array(const Array<Type> & toBeCopied)
+{
+    this->size = toBeCopied.getSize();
+    
+    this->front = new Node<Type>();
+    for(int index = 1; index < size; index++)
+    {
+        Node<Type> * temp = new Node<Type>();
+        temp->setNdoePointer(front);
+        front = temp;
+    }
+    Node<Type> * copyTemp = toBeCopied.getFront();
+    Node<Type> * updated = this->front;
+    for(int index = 0; index < size; index++)
+    {
+        updated->setNodeData(copyTemp->getNodeData());
+        updated = updated->getNodePointer();
+        copyTemp = copyTemp->getNodePointer();
     }
 }
 
