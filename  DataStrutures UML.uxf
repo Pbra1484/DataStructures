@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.2">
-  <zoom_level>10</zoom_level>
+  <zoom_level>9</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>140</x>
-      <y>300</y>
-      <w>300</w>
-      <h>170</h>
+      <x>72</x>
+      <y>270</y>
+      <w>270</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>Timer
 --
@@ -26,10 +26,10 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>40</y>
-      <w>380</w>
-      <h>180</h>
+      <x>657</x>
+      <y>36</y>
+      <w>342</w>
+      <h>162</h>
     </coordinates>
     <panel_attributes>IntNode
 --
@@ -43,16 +43,17 @@
 + IntNode() : constructor
 + IntNode(int value) : constructor
 + IntNode(int value, IntNode * nextNode) : constructor
-group=1</panel_attributes>
+group=1
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>290</y>
-      <w>280</w>
-      <h>170</h>
+      <x>657</x>
+      <y>261</y>
+      <w>252</w>
+      <h>153</h>
     </coordinates>
     <panel_attributes>IntNodeArray
 --
@@ -63,30 +64,32 @@ group=1</panel_attributes>
 + setAtIndex(int index, int value) : void
 + getFromIndex(int index) : int
 + getSize() : int
-group=1</panel_attributes>
+group=1
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>770</x>
+      <x>639</x>
       <y>0</y>
-      <w>480</w>
-      <h>480</h>
+      <w>432</w>
+      <h>432</h>
     </coordinates>
     <panel_attributes>Int Array
 --
 bg=orange
-group=1</panel_attributes>
+group=1
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>100</x>
-      <y>570</y>
-      <w>370</w>
-      <h>410</h>
+      <x>36</x>
+      <y>513</y>
+      <w>333</w>
+      <h>270</h>
     </coordinates>
     <panel_attributes>Node&lt;Type&gt;
 --
@@ -107,10 +110,10 @@ group=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>930</x>
-      <y>210</y>
-      <w>30</w>
-      <h>100</h>
+      <x>783</x>
+      <y>189</y>
+      <w>27</w>
+      <h>90</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
@@ -118,20 +121,20 @@ group=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>570</x>
-      <y>570</y>
-      <w>490</w>
-      <h>410</h>
+      <x>459</x>
+      <y>513</y>
+      <w>441</w>
+      <h>270</h>
     </coordinates>
-    <panel_attributes>Array&lt;Type&gt;
+    <panel_attributes>Model :: Array&lt;Type&gt;
 --
 - frond : Node&lt;Type&gt; *
 - size : int
 --
 + Array() : constructor
 + Array(int size) : constructor
-
 + ~Array&lt;Type&gt;() : destructor
+
 + Array&lt;Type&gt;(const Array&lt;Type&gt; &amp; toBeCopied) : copy constructor
 + getSize() : int
 + setAtIndex(int index, Type value) : void
@@ -142,12 +145,12 @@ group=2</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>60</x>
-      <y>520</y>
-      <w>1040</w>
-      <h>490</h>
+      <x>0</x>
+      <y>468</y>
+      <w>936</w>
+      <h>612</h>
     </coordinates>
-    <panel_attributes>&lt;Type&gt; Array
+    <panel_attributes>&lt;Type&gt; Array/List
 --
 bg=orange
 group=2</panel_attributes>
@@ -156,14 +159,57 @@ group=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>460</x>
-      <y>760</y>
-      <w>130</w>
-      <h>50</h>
+      <x>360</x>
+      <y>621</y>
+      <w>117</w>
+      <h>45</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m2=1..n
 </panel_attributes>
     <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>459</x>
+      <y>810</y>
+      <w>441</w>
+      <h>243</h>
+    </coordinates>
+    <panel_attributes>Model :: List&lt;Type&gt;
+--
+- size : int
+- front : Node&lt;Type&gt; *
+--
++ List&lt;Type&gt;() : constructor
++ List&lt;Type&gt;(const List&lt;Type&gt; &amp; source) : copy constructor
++ ~List&lt;Type&gt;() : destructor
+
++ addAtIndex(int index, Type value) : void
++ add(Type value) : void
++ remove(int index) : Type
++ setAtIndex(int index, Type data) : Type
++ getFromIndex(int index) : Type
++ contain(Type data) : bool
++ getSize() const : int
++ getFront() const : Node&lt;Type&gt; *
+
+group=1
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>711</y>
+      <w>117</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1..n
+</panel_attributes>
+    <additional_attributes>110.0;280.0;60.0;280.0;60.0;10.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
