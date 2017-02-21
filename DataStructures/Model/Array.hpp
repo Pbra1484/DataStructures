@@ -19,7 +19,7 @@ template <class Type>
 class Array
 {
 private:
-    Node<Type> * nodePointer;
+    Node<Type> * front;
     int size;
 public:
     Array();
@@ -52,7 +52,7 @@ Array<Type> :: Array(int size)
     for (int index = 1; index < size; index ++)
     {
         Node<Type> * current = new Node<Type>();
-        current->setNodePinter(front);
+        current->setNodePointer(front);
         front = current;
     }
 }
@@ -61,10 +61,10 @@ template <class Type>
 void Array<Type> :: setAtIndex(int index, Type data)
 {
     assert(index >= 0 && index < size);
-    
+    Type value;
     Node<Type> * current = front;
     
-    for(int position -1; position < index; poistion++)
+    for(int position = 1; position < index; position++)
     {
         current = current->getNodePointer();
     }
@@ -80,12 +80,12 @@ Type Array<Type> :: getFromIndex(int index)
     
     Node<Type> * current = front;
     
-    for(int position -1; position < index; poistion++)
+    for(int position = 1; position < index; position++)
     {
         current = current->getNodePointer();
     }
     
-    value = burrent->getNodeData()
+    value = current->getNodeData();
     
     return value;
 }
@@ -97,7 +97,7 @@ int Array<Type> :: getSize() const
 }
 
 template <class Type>
-Node<TYpe> * Array<Type> :: getFront() const
+Node<Type> * Array<Type> :: getFront() const
 {
     return front;
 }
@@ -106,7 +106,7 @@ template <class Type>
 Array<Type> :: ~Array()
 {
     int count = size;
-    Node(type) * remove = front;
+    Node<Type> * remove = front;
     while(front != nullptr)
     {
         front = front->getNodePointer();
@@ -129,7 +129,7 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
     for(int index = 1; index < size; index++)
     {
         Node<Type> * temp = new Node<Type>();
-        temp->setNdoePointer(front);
+        temp->setNodePointer(front);
         front = temp;
     }
     Node<Type> * copyTemp = toBeCopied.getFront();
