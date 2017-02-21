@@ -10,8 +10,10 @@
 #define List_h
 
 #include "Node.hpp"
-#include <asert.h>
+#include <assert.h>
 #include <iostream>
+
+using namespace std;
 
 template <class Type>
 class List
@@ -34,6 +36,25 @@ private:
     Node<Type> * getFront() const;
 };
 
+template <class Type>
+List<Type> :: List()
+{
+    
+}
 
+template <class Type>
+List<Type> setAtIndex(int index, Type data)
+{
+    assert(index >= 0 && index < size);
+    Type value;
+    Node<Type> * current = front;
+    
+    for(int position = 1; position < index; position++)
+    {
+        current = current->getNodePointer();
+    }
+    
+    current->setNodeData(calue);
+}
 
 #endif /* List_h */
