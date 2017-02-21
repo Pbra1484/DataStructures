@@ -36,6 +36,7 @@
 		518B513E1E490F0000F7860D /* IntNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IntNode.cpp; path = Model/IntNode.cpp; sourceTree = "<group>"; };
 		518B513F1E490F0000F7860D /* IntNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = IntNode.hpp; path = Model/IntNode.hpp; sourceTree = "<group>"; };
 		51B181F91E5CD0F6003904C0 /* Array.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Array.hpp; path = Model/Array.hpp; sourceTree = "<group>"; };
+		51B181FA1E5CD996003904C0 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +94,7 @@
 				512A1C7F1E4BA94F004DD62D /* IntNodeArray.hpp */,
 				515610F71E523E95000BB98E /* Node.hpp */,
 				51B181F91E5CD0F6003904C0 /* Array.hpp */,
+				51B181FA1E5CD996003904C0 /* List.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
