@@ -27,13 +27,12 @@ private:
     List(const List<Type> & source);
     ~List<Type>();
     
-    Type setAtIndex(int index, Type value)
     void addAtIndex(int index, Type value);
     void addFront(Type value);
     void addEnd(Type value);
     Type remove(int index);
     Type setAtIndex(int index, Type data);
-    Type getFromIndex(int index);
+    Type getAtIndex(int index);
     bool contain(Type data);
     int getSize() const;
     Node<Type> * getFront() const;
@@ -42,6 +41,21 @@ private:
 template <class Type>
 List<Type> :: List()
 {
+    
+}
+
+template <class Type>
+Type List<Type> :: getAtIndex(int index)
+{
+    assert(index >= 0 && index < size);
+    Node<Type> * current = front;
+    
+    for(int position = 1; position < index; position++)
+    {
+        current = current->getNodePointer();
+    }
+    
+    return current->getData();
     
 }
 
@@ -175,6 +189,12 @@ Type List<Type> :: remove(int index)
     return removed;
     
     
+}
+
+template <class Type>
+int List<Type> :: getSize()
+{
+    return size;
 }
 
 
