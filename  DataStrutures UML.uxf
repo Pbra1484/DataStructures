@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>315</x>
-      <y>279</y>
+      <x>324</x>
+      <y>243</y>
       <w>270</w>
       <h>153</h>
     </coordinates>
@@ -26,7 +26,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
+      <x>891</x>
       <y>36</y>
       <w>342</w>
       <h>162</h>
@@ -50,7 +50,7 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>900</x>
+      <x>891</x>
       <y>261</y>
       <w>252</w>
       <h>153</h>
@@ -71,7 +71,7 @@ layer=1</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>882</x>
+      <x>873</x>
       <y>0</y>
       <w>432</w>
       <h>432</h>
@@ -86,8 +86,8 @@ layer=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>450</x>
-      <y>477</y>
+      <x>171</x>
+      <y>531</y>
       <w>333</w>
       <h>270</h>
     </coordinates>
@@ -110,7 +110,7 @@ group=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1026</x>
+      <x>1017</x>
       <y>189</y>
       <w>27</w>
       <h>90</h>
@@ -121,8 +121,8 @@ group=2</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>873</x>
-      <y>477</y>
+      <x>594</x>
+      <y>531</y>
       <w>441</w>
       <h>270</h>
     </coordinates>
@@ -145,8 +145,8 @@ group=2</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>414</x>
-      <y>432</y>
+      <x>135</x>
+      <y>486</y>
       <w>936</w>
       <h>657</h>
     </coordinates>
@@ -159,8 +159,8 @@ group=2</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
-      <y>585</y>
+      <x>495</x>
+      <y>639</y>
       <w>117</w>
       <h>45</h>
     </coordinates>
@@ -172,8 +172,8 @@ m2=1..n
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>873</x>
-      <y>774</y>
+      <x>594</x>
+      <y>828</y>
       <w>441</w>
       <h>288</h>
     </coordinates>
@@ -204,8 +204,8 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>774</x>
-      <y>675</y>
+      <x>495</x>
+      <y>729</y>
       <w>117</w>
       <h>270</h>
     </coordinates>
@@ -213,5 +213,47 @@ layer=1</panel_attributes>
 m2=1..n
 group=2</panel_attributes>
     <additional_attributes>110.0;280.0;50.0;280.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>171</x>
+      <y>828</y>
+      <w>333</w>
+      <h>288</h>
+    </coordinates>
+    <panel_attributes>BiDirectionalNode&lt;Type&gt;
+--
+- nodeData : Type
+- previous : BiDirectionalNode&lt;Type&gt; *
+- next : BiDirectionalNode&lt;Type&gt; *
+--
++ BiDirectionalNode() : constructior
++ BiDirectionalNode(Type data) : constructor
++ BiDirectionalNode(Type data, 
+    BiDirectionalNode&lt;Type&gt; * previous, 
+    BiDirectiongalNode&lt;Type&gt; * next)
+
++ getNdoeData() : Type
++ setNodeData(Type data) : void
++ getPrevious() : BiDirectionalNode&lt;Type&gt;
++ setPrevious(BiDirectionalNode&lt;Type&gt; previous) : void
++ getNext() : BidirectionalNode&lt;Type&gt;
++ setNext(BiDirecitonalNode&lt;Type&gt; next) : void
+
+layer=1
+group=2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>324</x>
+      <y>792</y>
+      <w>27</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
   </element>
 </diagram>
