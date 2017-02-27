@@ -10,6 +10,7 @@
 #include <iostream>
 #include "../Model/IntNodeArray.hpp"
 #include "../Model/Array.hpp"
+#include "../Model/List.hpp"
 
 using namespace std;
 DataStructureController :: DataStructureController()
@@ -29,10 +30,11 @@ void DataStructureController:: testNodes()
 void DataStructureController :: start()
 {
     cout << "starting" << endl;
-    testAdvancedFeatures();
+//    testAdvancedFeatures();
 //    testNodes();
 //    cout << "Switing to aray testing" << endl;
 //    testIntArray();
+    testList();
     cout << "Finished Testing" << endl;
 }
 
@@ -79,7 +81,30 @@ void DataStructureController :: testAdvancedFeatures()
     
 }
 
-
+void DataStructureController:: testList()
+{
+    List<int> list;
+    list.addFront(1);
+    list.addEnd(3);
+    list.addAtIndex(1, 2);
+    
+    for(int index = 0; index < list.getSize(); index++)
+    {
+        cout << list.getAtIndex(index) << endl;
+    }
+    
+    list.remove(1);
+    list.setAtIndex(1, 2);
+    
+    for(int index = 0; index < list.getSize(); index++)
+    {
+        cout << list.getAtIndex(index) << endl;
+    }
+    
+    
+    
+    
+}
 
 
 
