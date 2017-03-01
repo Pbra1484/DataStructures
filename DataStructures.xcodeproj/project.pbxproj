@@ -39,6 +39,7 @@
 		51B181FA1E5CD996003904C0 /* List.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = List.hpp; path = Model/List.hpp; sourceTree = "<group>"; };
 		51B4EFAB1E64C751003AF575 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
 		51EFB1161E675D88007ED6EF /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
+		51EFB1171E676854007ED6EF /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 				51B181FA1E5CD996003904C0 /* List.hpp */,
 				51B4EFAB1E64C751003AF575 /* BiDirectionalNode.hpp */,
 				51EFB1161E675D88007ED6EF /* DoublyLinkedList.hpp */,
+				51EFB1171E676854007ED6EF /* CircularList.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
