@@ -18,7 +18,7 @@ IntNodeArray :: IntNodeArray(int size){
     
     for(int index = 1; index < size; index++){
         IntNode * current = new IntNode();
-        current->setNodePointer(front);
+        current->setNextPointer(front);
         front = current;
     }
     
@@ -31,7 +31,7 @@ int IntNodeArray :: getFromIndex(int index){
     IntNode * current = front;
     
     for(int position = 0; position < index; position++){
-        current = current->getNodePointer();
+        current = current->getNextPointer();
     }
     
     value = current->getNodeData();
@@ -45,7 +45,7 @@ void IntNodeArray :: setAtIndex(int index, int value){
     IntNode * current = front;
     
     for(int position = 0; position < index; position++){
-        current = current->getNodePointer();
+        current = current->getNextPointer();
     }
     
     current->setNodeData(value);
