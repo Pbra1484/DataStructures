@@ -113,6 +113,18 @@ void DataStructureController :: testIntStack()
     
     numbers.push(43);
     
+    cout << "the top is " << numbers.peek() << " and should be 275" << endl;
+    
+    int removed = numbers.remove(2);
+    
+    cout << "the revomed value is " << removed << " and should be 43" << endl;
+    
+    numbers.add(2345);
+    numbers.add(202350926);
+    
+    cout << "the size is " << numbers.getSize() << " and should be 4" << endl;
+    
+    numbers.pop();
     
 }
 
