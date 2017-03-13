@@ -12,6 +12,7 @@
 		512A1C881E4BB5A8004DD62D /* DataRunner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 512A1C871E4BB5A8004DD62D /* DataRunner.cpp */; };
 		518B51401E490F0000F7860D /* IntNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 518B513E1E490F0000F7860D /* IntNode.cpp */; };
 		51C6F94A1E7711DE004D7C69 /* FoodItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C6F9481E7711DE004D7C69 /* FoodItem.cpp */; };
+		51C6F94D1E7716D6004D7C69 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 51C6F94C1E7716D6004D7C69 /* Timer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		51B4EFAB1E64C751003AF575 /* BiDirectionalNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = BiDirectionalNode.hpp; path = Model/BiDirectionalNode.hpp; sourceTree = "<group>"; };
 		51C6F9481E7711DE004D7C69 /* FoodItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FoodItem.cpp; path = Model/FoodItem.cpp; sourceTree = "<group>"; };
 		51C6F9491E7711DE004D7C69 /* FoodItem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FoodItem.hpp; path = Model/FoodItem.hpp; sourceTree = "<group>"; };
+		51C6F94C1E7716D6004D7C69 /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Timer.cpp; path = Model/Timer.cpp; sourceTree = "<group>"; };
+		51C6F94E1E7716DD004D7C69 /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Timer.hpp; path = Model/Timer.hpp; sourceTree = "<group>"; };
 		51E455F71E6F45920069CA3A /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = Model/Queue.hpp; sourceTree = "<group>"; };
 		51E455F81E6F4A830069CA3A /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
 		51EFB1161E675D88007ED6EF /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 		518B513D1E4907EA00F7860D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				51C6F94E1E7716DD004D7C69 /* Timer.hpp */,
+				51C6F94C1E7716D6004D7C69 /* Timer.cpp */,
 				518B513E1E490F0000F7860D /* IntNode.cpp */,
 				518B513F1E490F0000F7860D /* IntNode.hpp */,
 				512A1C7E1E4BA94F004DD62D /* IntNodeArray.cpp */,
@@ -174,6 +179,7 @@
 				518B51401E490F0000F7860D /* IntNode.cpp in Sources */,
 				512A1C861E4BB278004DD62D /* DataStructureController.cpp in Sources */,
 				512A1C801E4BA94F004DD62D /* IntNodeArray.cpp in Sources */,
+				51C6F94D1E7716D6004D7C69 /* Timer.cpp in Sources */,
 				512A1C881E4BB5A8004DD62D /* DataRunner.cpp in Sources */,
 				51C6F94A1E7711DE004D7C69 /* FoodItem.cpp in Sources */,
 			);

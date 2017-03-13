@@ -23,7 +23,7 @@ public:
     Type remove(int index0);
     void enqueue(Type data);
     Type dequeue();
-    Type peek(0);
+    Type peek();
 };
 
 
@@ -37,7 +37,7 @@ Queue<Type> :: Queue() : DoublyLinkedList<Type>()
 template <class Type>
 Queue<Type> :: ~Queue()
 {
-    BiDirecitonalNode<Type> * remove = this->getFront();
+    BiDirectionalNode<Type> * remove = this->getFront();
     while(this->getFront() != nullptr)
     {
         this->setFront(this->getFront()->getNextPointer());
@@ -73,7 +73,7 @@ void Queue<Type> :: enqueue(Type insertedValue)
 template <class Type>
 Type Queue<Type> :: remove(int index)
 {
-    assert(index == 0 && this->getSize() ? 0);
+    assert(index == 0 && this->getSize() > 0);
     return dequeue();
 }
 
@@ -82,19 +82,20 @@ Type Queue<Type> :: dequeue()
 {
     assert(this->getSize() > 0);
     
-    Type removedVlaue = this->getFront()->getNodeData();
+    Type removedValue = this->getFront()->getNodeData();
     BiDirectionalNode<Type> * removeMe = this->getFront();
     
     if(this->getSize() == 1)
     {
         this->setEnd(nullptr);
-        this->setFront(nulptr);
+        this->setFront(nullptr);
     }
     else
     {
         this->setFront(removeMe->getNextPointer());
+        this->getFront()->setPreviousPointer(nullptr);
     }
-    this->setFront()->setPreviousPointer(nullptr);
+   
     
     delete removeMe;
     this->setSize(this->getSize() - 1);

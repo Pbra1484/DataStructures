@@ -9,6 +9,7 @@
 #ifndef DoublyLinkedList_h
 #define DoublyLinkedList_h
 
+
 #include "BiDirectionalNode.hpp"
 
 template <class Type>
@@ -19,40 +20,70 @@ private:
     BiDirectionalNode<Type> * end;
     int size;
 public:
+    virtual void add(Type value) = 0;
+    virtual Type remove(int index) = 0;
     DoublyLinkedList();
     virtual ~DoublyLinkedList();
+    
     int getSize() const;
     BiDirectionalNode<Type> * getFront() const;
     BiDirectionalNode<Type> * getEnd() const;
     
-    virtual void add(Type data) = 0;
-    virtual Type remove(int index) = 0;
+    void setFront(BiDirectionalNode<Type> * front);
+    void setSize(int updated);
+    void setEnd(BiDirectionalNode<Type> * end);
 };
+
 
 template <class Type>
 DoublyLinkedList<Type> :: DoublyLinkedList()
 {
-    size = 0;
-    front = nullptr;
-    end = nullptr;
+    this->size = 0;
+    this->front = nullptr;
+    this->end = nullptr;
 }
 
 template <class Type>
-int DoublyLinkedList<Type> :: getSize()
+DoublyLinkedList<Type> :: ~DoublyLinkedList()
 {
-    return szie;
+    //Implemented only to avoid errors.
+    //Just like a Java interface method.
 }
 
-template <class Tyupe>
-BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getFront()
+template <class Type>
+int DoublyLinkedList<Type> :: getSize() const
 {
-    return front;
+    return this->size;
 }
 
-template <class Tyupe>
-BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd()
+template <class Type>
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getFront() const
 {
-    return end;
+    return this->front;
+}
+
+template <class Type>
+BiDirectionalNode<Type> * DoublyLinkedList<Type> :: getEnd() const
+{
+    return this->end;
+}
+
+template <class Type>
+void DoublyLinkedList<Type> :: setSize(int size)
+{
+    this->size = size;
+}
+
+template <class Type>
+void DoublyLinkedList<Type> :: setFront(BiDirectionalNode<Type> * front)
+{
+    this->front = front;
+}
+
+template <class Type>
+void DoublyLinkedList<Type> :: setEnd(BiDirectionalNode<Type> * end)
+{
+    this->end = end;
 }
 
 #endif /* DoublyLinkedList_h */

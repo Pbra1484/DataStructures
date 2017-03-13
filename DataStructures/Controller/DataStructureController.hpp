@@ -10,6 +10,13 @@
 #define DataStructureController_hpp
 
 #include "../Model/Node.hpp"
+#include "../Model/Array.hpp"
+#include "../Model/FoodItem.hpp"
+
+#include "../Model/Stack.hpp"
+#include "../Model/Queue.hpp"
+#include "../Model/CircularList.hpp"
+#include "../Model/Timer.hpp"
 #include <string>
 
 
@@ -23,6 +30,8 @@ private:
     Node<string> wordNode;
     void testAdvancedFeatures();
     void testList();
+    void testIntStack();
+    void testFoodQueue();
     
 public:
     DataStructureController();

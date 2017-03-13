@@ -34,7 +34,7 @@ void DataStructureController :: start()
 //    testNodes();
 //    cout << "Switing to aray testing" << endl;
 //    testIntArray();
-    testList();
+    testFoodQueue();
     cout << "Finished Testing" << endl;
 }
 
@@ -100,14 +100,48 @@ void DataStructureController:: testList()
     {
         cout << list.getAtIndex(index) << endl;
     }
+}
+
+
+void DataStructureController :: testIntStack()
+{
+    Stack<int> numbers;
+    numbers.add(3);
+    numbers.push(275);
     
+    cout << "the top is " << numbers.peek() << " and should be 275" << endl;
     
+    numbers.push(43);
     
     
 }
 
-
-
+void DataStructureController :: testFoodQueue()
+{
+    Queue<FoodItem> tastyFood;
+    FoodItem dunkin("grows stuff");
+    
+    tastyFood.enqueue(dunkin);
+    FoodItem boring;
+    tastyFood.add(boring);
+    
+    cout << "thie size is " << tastyFood.getSize() << " and should be 2" << endl;
+    
+    FoodItem removed = tastyFood.dequeue();
+    cout << "The item removed from the queue was: " << removed.getFoodName() << " and should be : grows stuff" << endl;
+    
+    cout << "the size is " << tastyFood.getSize() << " and should be 1"<< endl;
+    
+    tastyFood.add(dunkin);
+    
+    cout << "the size is " << tastyFood.getSize() << " and should be 2" << endl;
+    
+    tastyFood.remove(0);
+    
+    cout << "the front of the queue is " << tastyFood.peek().getFoodName() << endl;
+    
+    
+}
 
 
 
