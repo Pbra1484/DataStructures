@@ -48,6 +48,7 @@
 		51E455F81E6F4A830069CA3A /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
 		51EFB1161E675D88007ED6EF /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
 		51EFB1171E676854007ED6EF /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CircularList.hpp; path = Model/CircularList.hpp; sourceTree = "<group>"; };
+		51F5A2451E79CE890056AFB8 /* DoubleList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoubleList.hpp; path = Model/DoubleList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +116,7 @@
 				51E455F81E6F4A830069CA3A /* Stack.hpp */,
 				51C6F9481E7711DE004D7C69 /* FoodItem.cpp */,
 				51C6F9491E7711DE004D7C69 /* FoodItem.hpp */,
+				51F5A2451E79CE890056AFB8 /* DoubleList.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
