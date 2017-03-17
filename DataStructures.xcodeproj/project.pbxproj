@@ -111,11 +111,11 @@
 				51B181FA1E5CD996003904C0 /* List.hpp */,
 				51B4EFAB1E64C751003AF575 /* BiDirectionalNode.hpp */,
 				51EFB1161E675D88007ED6EF /* DoublyLinkedList.hpp */,
+				51C6F9481E7711DE004D7C69 /* FoodItem.cpp */,
+				51C6F9491E7711DE004D7C69 /* FoodItem.hpp */,
 				51EFB1171E676854007ED6EF /* CircularList.hpp */,
 				51E455F71E6F45920069CA3A /* Queue.hpp */,
 				51E455F81E6F4A830069CA3A /* Stack.hpp */,
-				51C6F9481E7711DE004D7C69 /* FoodItem.cpp */,
-				51C6F9491E7711DE004D7C69 /* FoodItem.hpp */,
 				51F5A2451E79CE890056AFB8 /* DoubleList.hpp */,
 			);
 			name = Model;

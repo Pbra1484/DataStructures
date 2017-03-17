@@ -12,6 +12,7 @@
 #include "../Model/Array.hpp"
 #include "../Model/List.hpp"
 
+
 using namespace std;
 DataStructureController :: DataStructureController()
 {
@@ -34,7 +35,8 @@ void DataStructureController :: start()
 //    testNodes();
 //    cout << "Switing to aray testing" << endl;
 //    testIntArray();
-    testFoodQueue();
+//    testFoodQueue();
+    testCurcularList();
     cout << "Finished Testing" << endl;
 }
 
@@ -102,7 +104,6 @@ void DataStructureController:: testList()
     }
 }
 
-
 void DataStructureController :: testIntStack()
 {
     Stack<int> numbers;
@@ -155,9 +156,30 @@ void DataStructureController :: testFoodQueue()
     
 }
 
+void DataStructureController :: testCurcularList()
+{
+    CircularList<int> roundInts;
+    
+    roundInts.add(0);
+    roundInts.add(1);
+    roundInts.add(2);
+    roundInts.add(3);
+    
+    cout << "this should be 1 and is " << roundInts.getFromIndex(1) << endl;
+    
+    roundInts.remove(1);
+    
+    cout << "this should be 2 and is " << roundInts.getFromIndex(1) << endl;
+    
+    roundInts.setAtIndex(1, 9001);
+    
+    cout << "This should be over 9000 and is " << roundInts.getFromIndex(1) << endl;
+}
 
-
-
+void DataStructureController :: testDoubleList()
+{
+    
+}
 
 
 

@@ -16,6 +16,7 @@
 #include "../Model/Stack.hpp"
 #include "../Model/Queue.hpp"
 #include "../Model/CircularList.hpp"
+#include "../Model/DoubleList.hpp"
 #include "../Model/Timer.hpp"
 #include <string>
 
@@ -32,7 +33,8 @@ private:
     void testList();
     void testIntStack();
     void testFoodQueue();
-    
+    void testCurcularList();
+    void testDoubleList();
 public:
     DataStructureController();
     void start();
