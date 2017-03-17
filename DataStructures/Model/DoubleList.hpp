@@ -20,8 +20,6 @@ public:
     ~DoubleList();
     void add(Type data);
     Type remove(int index);
-    void addAtIndexFast(int index, Type value);
-    void addAtIndex(int index, Type value);
     Type getFromIndex(int index);
     Type getFromIndexFast(int index);
 };
@@ -80,6 +78,7 @@ void DoubleList<Type> :: add(Type value)
 template <class Type>
 Type DoubleList<Type> :: remove(int index)
 {
+    
     Type derp;
     BiDirectionalNode<Type> * nodeToTakeOut = this->getFront();
     for(int spot = 0; spot < index; spot++)
@@ -87,13 +86,37 @@ Type DoubleList<Type> :: remove(int index)
         nodeToTakeOut = nodeToTakeOut->getNextPointer();
     }
     derp = nodeToTakeOut->getNodeData();
-    
-    BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
-    BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
-    
-    prev->setNextPointer(next);
-    next->setPreviousPointer(prev);
-    
+    if(this->getSize() > 0)
+    {
+        BiDirectionalNode<Type> * prev = nodeToTakeOut->getPreviousPointer();
+        BiDirectionalNode<Type> * next = nodeToTakeOut->getNextPointer();
+        
+        
+        if(prev != nullptr)
+        {
+        prev->setNextPointer(next);
+        }
+        if(next != nullptr)
+        {
+        next->setPreviousPointer(prev);
+        }
+        
+        if(index == 0)
+        {
+            this->setFront(this->getFront()->getNextPointer());
+            this->getFront()->setPreviousPointer(nullptr);
+        }
+        else if(index == this->getSize() -1)
+        {
+            this->setEnd(this->getEnd()->getPreviousPointer());
+            this->getEnd()->setNextPointer(nullptr);
+        }
+    }
+    else
+    {
+        this->setFront(nullptr);
+        this->setEnd(nullptr);
+    }
     delete nodeToTakeOut;
     
     this->setSize(this->getSize() - 1);

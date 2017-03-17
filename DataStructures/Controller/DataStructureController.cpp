@@ -36,7 +36,8 @@ void DataStructureController :: start()
 //    cout << "Switing to aray testing" << endl;
 //    testIntArray();
 //    testFoodQueue();
-    testCurcularList();
+//    testCurcularList();
+    testDoubleList();
     cout << "Finished Testing" << endl;
 }
 
@@ -178,6 +179,19 @@ void DataStructureController :: testCurcularList()
 
 void DataStructureController :: testDoubleList()
 {
+    DoubleList<int> dInts;
+    
+    dInts.add(0);
+    dInts.add(1);
+    dInts.add(2);
+    dInts.add(3);
+    
+    cout << "this should be 1 and is " << dInts.getFromIndex(1) << endl;
+    
+    dInts.remove(1);
+    
+    cout << "this should be 2 and is " << dInts.getFromIndexFast(1) << endl;
+    
     
 }
 
