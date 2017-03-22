@@ -37,7 +37,9 @@ void DataStructureController :: start()
 //    testIntArray();
 //    testFoodQueue();
 //    testCurcularList();
-    testDoubleList();
+//    testDoubleList();
+//    testIntStack();
+    testList();
     cout << "Finished Testing" << endl;
 }
 
@@ -91,6 +93,7 @@ void DataStructureController:: testList()
     list.addEnd(3);
     list.addAtIndex(1, 2);
     
+    cout << "should be 1 2 3" << endl;
     for(int index = 0; index < list.getSize(); index++)
     {
         cout << list.getAtIndex(index) << endl;
@@ -99,27 +102,35 @@ void DataStructureController:: testList()
     list.remove(1);
     list.setAtIndex(1, 2);
     
+    cout << "shuld be 1 2" << endl;
+    
     for(int index = 0; index < list.getSize(); index++)
     {
         cout << list.getAtIndex(index) << endl;
     }
+    
+    cout << "should be 1 and is " << list.getFront()->getNodeData() << endl;
+    
+    cout << "should be 2 and is " << list.getEnd()->getNodeData() << endl;
 }
 
 void DataStructureController :: testIntStack()
 {
     Stack<int> numbers;
-    numbers.add(3);
-    numbers.push(275);
+    numbers.add(0);
+    numbers.push(1);
     
-    cout << "the top is " << numbers.peek() << " and should be 275" << endl;
+    cout << "the top is " << numbers.peek() << " and should be 1" << endl;
     
-    numbers.push(43);
+    numbers.push(2);
     
-    cout << "the top is " << numbers.peek() << " and should be 275" << endl;
+        cout << "the size is " << numbers.getSize() << " and should be 3" << endl;
+    
+    cout << "the top is " << numbers.peek() << " and should be 2" << endl;
     
     int removed = numbers.remove(2);
     
-    cout << "the revomed value is " << removed << " and should be 43" << endl;
+    cout << "the revomed value is " << removed << " and should be 2" << endl;
     
     numbers.add(2345);
     numbers.add(202350926);
@@ -127,6 +138,8 @@ void DataStructureController :: testIntStack()
     cout << "the size is " << numbers.getSize() << " and should be 4" << endl;
     
     numbers.pop();
+    
+        cout << "the size is " << numbers.getSize() << " and should be 3" << endl;
     
 }
 
