@@ -33,6 +33,7 @@ public:
     
     void setAtIndex(int index, Type value);
     Type getFromIndex(int index);
+    int nextIndexOf(Type data, int spot);
 };
 
 template <class Type>
@@ -141,5 +142,29 @@ Array<Type> :: Array(const Array<Type> & toBeCopied)
         copyTemp = copyTemp->getNextPointer();
     }
 }
+
+template <class Type>
+int Array<Type> :: nextIndexOf(Type value, int position)
+{
+    assert(position >= 0 && position < this->getSize());
+    
+    int nextIndex = -1;
+    
+    Node<Type> * current = this->getFront();
+    
+    for(int index = 0; index < this->getSize(); index++)
+    {
+        if(index >= position)
+        {
+            if(current->getNodedaata() == value)
+            {
+                return index;
+            }
+        }
+        current = current->getNextPointer;
+    }
+    return nextIndex;
+}
+
 
 #endif /* Array_h */
