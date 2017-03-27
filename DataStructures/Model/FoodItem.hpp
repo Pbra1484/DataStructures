@@ -32,6 +32,10 @@ public:
     void setFoodName(string name);
     void setCost(double cost);
     void SetDelicous(bool delicious);
+    
+    bool operator < (FoodItem & otherFood);
+    bool operator > (FoodItem & otherFood);
+    bool operator == (FoodItem & otherFood);
 };
 
 
