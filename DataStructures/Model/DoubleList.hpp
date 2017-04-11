@@ -24,6 +24,7 @@ public:
     Type getFromIndexFast(int index);
     int indexOf(Type value);
     int nextIndexOf(Type value, int position);
+    int altIndexOf(Type value);
 };
 
 template <class Type>
@@ -193,5 +194,30 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
     }
     return nextIndex;
 }
+
+template <class Type>
+int BoubleList<Type> :: altIndexOf(Type findMe)
+{
+    int alt = 0;
+    for(BiDirectionalNode<Type> * search = this->getFront();
+        search != nullptr;
+        search = search->getNextPointer())
+    {
+        if (findMe != search->getNeodeData())
+        {
+            alt++;
+        }
+    }
+    if(alternate >= this->getSize())
+    {
+        return -1;
+    }
+    else
+    {
+        return alt;
+    }
+}
+
+
 
 #endif /* DoubleList_h */
