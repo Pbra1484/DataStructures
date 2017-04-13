@@ -7,6 +7,7 @@
 //
 
 #include "CrimeData.hpp"
+#include <cmath>
 
 CrimeData :: CrimeData()
 {

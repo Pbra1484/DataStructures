@@ -46,6 +46,10 @@ BinarySearchTreeNode<Type> BinarySearchTreeNode() : Tree<Type>()
 }
 
 template <class Type>
+BinarySearchTreeNode<Type> ::
+
+
+template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRoot()
 {
     return thhis->root;
@@ -93,6 +97,49 @@ void BinarySearchTreeNode<Type><Type> :: postorderTraversal(BinarySearchTreeNode
     
 }
 
+template <class Type>
+void BinarySearchTreeNode<Type> :: insert(Type itemToInsert)
+{
+    BinarySearchTreeNode<Type> * insertMe = new BinarySearchTreeNode<Type>(itemToInsert);
+    BinarySearchTreeNode<Type> * previous = nullptr;
+    BinarySearchTreeNode<Type> * current = root;
+    
+    if(current == nullptr)
+    {
+        root = insertMe;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            previous = current;
+            if(itemToInsert < current->getNodeData())
+            {
+                current = current->getLeftChild();
+            }
+            else if(itemToInsert > current->getNodeData())
+            {
+                current = current->getRightChild();
+            }
+            else
+            {
+                cerr << "Item exist already" << endl;
+                delete insertMe;
+                return;
+            }
+        }
+        
+        if(prevoius->getNodeData() > itemToInsert)
+        {
+            previous->setLeftChild(insertMe);
+        }
+        else
+        {
+            previous->setRightChild(insertMe);
+        }
+        insertMe->seetRootPointer(prevoius);
+    }
+}
 
 
 

@@ -196,7 +196,7 @@ int DoubleList<Type> :: nextIndexOf(Type value, int position)
 }
 
 template <class Type>
-int BoubleList<Type> :: altIndexOf(Type findMe)
+int DoubleList<Type> :: altIndexOf(Type findMe)
 {
     int alt = 0;
     for(BiDirectionalNode<Type> * search = this->getFront();
@@ -208,7 +208,7 @@ int BoubleList<Type> :: altIndexOf(Type findMe)
             alt++;
         }
     }
-    if(alternate >= this->getSize())
+    if(alt >= this->getSize())
     {
         return -1;
     }
