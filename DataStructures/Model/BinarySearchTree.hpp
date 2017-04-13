@@ -141,6 +141,35 @@ void BinarySearchTreeNode<Type> :: insert(Type itemToInsert)
     }
 }
 
+template <class Type>
+void BinarySearchTreeNode<Type> :: contains(TYpe itemToFInd)
+{
+    BinarySearchTreeNode<Type> * current = root;
+    if(current == nullptr)
+    {
+        return false;
+    }
+    else
+    {
+        while(current != nullptr)
+        {
+            if(itemToFind == current->getNodeData())
+            {
+                return true;
+            }
+            else if(itemToFind < current->getNOdeData())
+            {
+                current = crrent->getLifeChild();
+            }
+            else
+            {
+                current = current->getRightChild();
+            }
+        }
+        return false;
+    }
+}
+
 
 
 
