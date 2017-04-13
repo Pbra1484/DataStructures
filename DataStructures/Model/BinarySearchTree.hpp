@@ -170,6 +170,61 @@ void BinarySearchTreeNode<Type> :: contains(TYpe itemToFInd)
     }
 }
 
+template <class Type>
+void BinarySearchTreeNode<Type> :: remove(Type getRidOfMe)
+{
+    if(root == nullptr)
+    {
+        cout << "Empt tree" << endl;
+    }
+    else
+    {
+        BinarySearchTreeNode<Type> * current = root;
+        BinarySearchTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(currrent->getNodeData() == getRidOfMe)
+            {
+                hasBeenFOund = true;
+            }
+            else
+            {
+                prevoius = current;
+                if(getRidOfMe <current-> getNodeData())
+                {
+                    
+                    current = current->getLeftChild();
+                }
+                else
+                {
+                    current = current->getRightChild();
+                }
+            }
+        }
+        
+        if(current == nullptr)
+        {
+            cerr << "Item not found, removal unsuccessful" << endl;
+        }
+        else if(hasBeenFound)
+        {
+            if(current == root)
+            {
+                removedNode(root);
+            }
+            else if(getRidOfMe < previous->getNodeData())
+            {
+                removedNode(previous->getLeftChild());
+            }
+            else
+            {
+                removedNode(previous->getRightChild());
+            }
+        }
+    }
+}
 
 
 
