@@ -58,11 +58,10 @@ BinarySearchTreeNode<Type> :: ~BinarySearchTree()
     
 }
 
-
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRoot()
 {
-    return thhis->root;
+    return this->root;
 }
 
 template <class Type>
@@ -345,6 +344,141 @@ void BInarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
         setRoot(removeMe);
     }
 }
+
+template <class Type>
+int BinarySearchTreeNode<Type> :: getSize()
+{
+    return calculateSize(root);
+}
+
+template <class Type>
+int BinarySearchTreeNode<Type> :: getHeight()
+{
+    return calculateHeight(root);
+}
+
+template <class Type>
+bool BinarySearchTreeNode<Type> :: isBalanced()
+{
+    return isBalanced(root);
+}
+
+template <class Type>
+bool BinarySearchTreeNode<Type> :: isComplete()
+{
+    return isComplete(root);
+}
+
+template <class Type>
+int BinarySearchTreeNode<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
+{
+    int count = 1;
+    if(start == nullptr)
+    {
+        retur 0;
+    }
+    else
+    {
+        count += calculateSize(start->getLeftCHild());
+        count += calculateSize(start->getRightCHild());
+        return count;
+    }
+}
+
+template <class Type>
+int BinarySearchTreeNode<Type> :: calculateHeight(BInarySearchTreeNdoe<Type> * start)
+{
+    if(Start == nullptr)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1 + max(caluclateHeight(start->getLeftChild()), calculateHeight(start->getRightChild()));
+    }
+}
+
+template <class Type>
+bool BinarySearchTreeNode<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
+{
+    int leftHeight = 0;
+    int rightHeight = 0;
+    
+    if(start == null ptr)
+    {
+        return true;
+    }
+    
+    leftHeight = calculateHeight(start->getLeftChild());
+    reightHeifht = calculateHeight(start->getRightCHild());
+    
+    int heightDifference = abs(leftHeight-rightHeight);
+    bool leftBalanced = isBalanced(start->getLeftChild());
+    bool rightBalanced = isBalanced(start->getRightChild());
+    
+    if(heightDifference <= 1 && leftBalanced  && rightBalanced)
+    {
+        
+        return true;
+    }
+    
+    return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
