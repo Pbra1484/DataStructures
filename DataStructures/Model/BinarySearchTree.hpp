@@ -55,7 +55,7 @@ BinarySearchTreeNode<Type> BinarySearchTreeNode() : Tree<Type>()
 template <class Type>
 BinarySearchTreeNode<Type> :: ~BinarySearchTree()
 {
-    
+    delete root;
 }
 
 template <class Type>
