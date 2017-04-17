@@ -16,11 +16,15 @@ private:
     BinarySearchTreeNood<Type> * root;
     
     int calculateSize(BinarySearchTreeNode<Type> * root);
+    int calculteHeight(BinarySearchTreeNode<Type> * root);
+    bool isBalanced(BinarySearchTreeNode<Type> * root);
+    bool isComplete(BinarySearchTreeNode<Type> * root);
+    
     void inOrderTraversal(BinarySearchTreeNode<Type> * inStart);
     void preOerderTraveral(BinarySearchTreeNode<Type> * preStart);
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     
-    void removeNode(BinarySearchTreeNode<Type> * & removeMe);
+    void removeNode(BinarySearchTreeNode<Type> * removeMe);
 public:
     BinarySearchTree();
     ~BinarySearchTree();
@@ -32,7 +36,10 @@ public:
     void preOrderTraversal();
     void postOrderTraversal();
     
-    void printToFile();
+    int getSize();
+    int getHEight();
+    bool isComplete();
+    bool isBalanced();
     
     bool contains(Type value);
     void insert(Type itemToInsert);
@@ -240,7 +247,7 @@ void BinarySearchTreeNode<Type> :: remove(Type getRidOfMe)
 }
 
 template <class TYpe>
-void BInarySearchTree<Type> :: removeNOde(BinarySearchTreeNode<Type> * & removeMe)
+void BInarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
 {
     BinarySearchTreeNode<Type> * current;
     BinarySearchTreeNode<Type> * previous;
