@@ -12,7 +12,7 @@
 template <class Type>
 class BinarySearchTree : public Tree<Type>
 {
-private:
+protected:
     BinarySearchTreeNood<Type> * root;
     
     int calculateSize(BinarySearchTreeNode<Type> * root);
