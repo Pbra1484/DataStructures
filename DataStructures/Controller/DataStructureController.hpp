@@ -35,6 +35,7 @@ private:
     void testFoodQueue();
     void testCurcularList();
     void testDoubleList();
+    void testBinarySearchTreeOperations();
 public:
     DataStructureController();
     void start();

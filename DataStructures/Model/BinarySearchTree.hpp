@@ -9,11 +9,14 @@
 #ifndef BinarySearchTree_h
 #define BinarySearchTree_h
 
+#include "Tree.hpp"
+#include "BinarySearchTreeNode.hpp"
+
 template <class Type>
 class BinarySearchTree : public Tree<Type>
 {
 protected:
-    BinarySearchTreeNood<Type> * root;
+    BinarySearchTreeNode<Type> * root;
     
     int calculateSize(BinarySearchTreeNode<Type> * root);
     int calculteHeight(BinarySearchTreeNode<Type> * root);
@@ -47,49 +50,49 @@ public:
 };
 
 template <class Type>
-BinarySearchTreeNode<Type> BinarySearchTreeNode() : Tree<Type>()
+BinarySearchTree<Type> :: BinarySearchTree() : Tree<Type>()
 {
-    this->root = nullptr();
+    this->root = nullptr;
 }
 
 template <class Type>
-BinarySearchTreeNode<Type> :: ~BinarySearchTree()
+BinarySearchTree<Type> :: ~BinarySearchTree()
 {
     delete root;
 }
 
 template <class Type>
-BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRoot()
+BinarySearchTreeNode<Type> * BinarySearchTree<Type> :: getRoot()
 {
     return this->root;
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: setRoot(BinarySearchTreeNode<Type> * root)
+void BinarySearchTree<Type> :: setRoot(BinarySearchTreeNode<Type> * root)
 {
     this->root = root;
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: inOrderTraversal()
+void BinarySearchTree<Type> :: inOrderTraversal()
 {
     inOrderTraaversal(root);
 }
 
 template <class Type>
-BinarySearchTreeNode<Type> :: preOrderTraversal()
+void BinarySearchTree<Type> :: preOrderTraversal()
 {
     postOrderTraversal(root);
 }
 
 template <class Type>
-int BinarySearchTreeNode<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
+int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 {
     return 0;
 }
 
 template <class Type>
-void BinarysearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inStart)
+void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inStart)
 {
     if(inStart != nullptr)
     {
@@ -99,10 +102,10 @@ void BinarysearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inS
     }
 }
 
-template <class <Type>
-void BinarySearchTree<Type> :: perOrderTraversal(BinarySearchTreeNode<Type> * perStart)
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal(BinarySearchTreeNode<Type> * perStart)
 {
-    if(postStart != nullptr)
+    if(preStart != nullptr)
     {
         postOrderTraversal(postStart->getLeftChild());
         postOrderTraversal(postStart->getRigthChild());
@@ -111,13 +114,13 @@ void BinarySearchTree<Type> :: perOrderTraversal(BinarySearchTreeNode<Type> * pe
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type><Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * postStart)
+void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * postStart)
 {
     
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: insert(Type itemToInsert)
+void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
     BinarySearchTreeNode<Type> * insertMe = new BinarySearchTreeNode<Type>(itemToInsert);
     BinarySearchTreeNode<Type> * previous = nullptr;
@@ -161,7 +164,7 @@ void BinarySearchTreeNode<Type> :: insert(Type itemToInsert)
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: contains(TYpe itemToFInd)
+void BinarySearchTree<Type> :: contains(TYpe itemToFInd)
 {
     BinarySearchTreeNode<Type> * current = root;
     if(current == nullptr)
@@ -190,7 +193,7 @@ void BinarySearchTreeNode<Type> :: contains(TYpe itemToFInd)
 }
 
 template <class Type>
-void BinarySearchTreeNode<Type> :: remove(Type getRidOfMe)
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 {
     if(root == nullptr)
     {
@@ -246,7 +249,7 @@ void BinarySearchTreeNode<Type> :: remove(Type getRidOfMe)
 }
 
 template <class TYpe>
-void BInarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
+void BinarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
 {
     BinarySearchTreeNode<Type> * current;
     BinarySearchTreeNode<Type> * previous;
@@ -346,31 +349,31 @@ void BInarySearchTree<Type> :: removeNode(BinarySearchTreeNode<Type> * removeMe)
 }
 
 template <class Type>
-int BinarySearchTreeNode<Type> :: getSize()
+int BinarySearchTree<Type> :: getSize()
 {
     return calculateSize(root);
 }
 
 template <class Type>
-int BinarySearchTreeNode<Type> :: getHeight()
+int BinarySearchTree<Type> :: getHeight()
 {
     return calculateHeight(root);
 }
 
 template <class Type>
-bool BinarySearchTreeNode<Type> :: isBalanced()
+bool BinarySearchTree<Type> :: isBalanced()
 {
     return isBalanced(root);
 }
 
 template <class Type>
-bool BinarySearchTreeNode<Type> :: isComplete()
+bool BinarySearchTree<Type> :: isComplete()
 {
     return isComplete(root);
 }
 
 template <class Type>
-int BinarySearchTreeNode<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
+int BinarySearchTree<Type> :: calculateSize(BinarySearchTreeNode<Type> * start)
 {
     int count = 1;
     if(start == nullptr)
@@ -386,7 +389,7 @@ int BinarySearchTreeNode<Type> :: calculateSize(BinarySearchTreeNode<Type> * sta
 }
 
 template <class Type>
-int BinarySearchTreeNode<Type> :: calculateHeight(BInarySearchTreeNdoe<Type> * start)
+int BinarySearchTree<Type> :: calculateHeight(BInarySearchTreeNdoe<Type> * start)
 {
     if(Start == nullptr)
     {
@@ -399,7 +402,7 @@ int BinarySearchTreeNode<Type> :: calculateHeight(BInarySearchTreeNdoe<Type> * s
 }
 
 template <class Type>
-bool BinarySearchTreeNode<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
+bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
 {
     int leftHeight = 0;
     int rightHeight = 0;
