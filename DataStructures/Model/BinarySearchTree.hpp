@@ -24,7 +24,7 @@ protected:
     bool isComplete(BinarySearchTreeNode<Type> * root);
     
     void inOrderTraversal(BinarySearchTreeNode<Type> * inStart);
-    void preOerderTraveral(BinarySearchTreeNode<Type> * preStart);
+    void preOrderTraversal(BinarySearchTreeNode<Type> * preStart);
     void postOrderTraversal(BinarySearchTreeNode<Type> * postStart);
     
     void removeNode(BinarySearchTreeNode<Type> * removeMe);
@@ -103,20 +103,25 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinarySearchTreeNode<Type> * inS
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: preOrderTraversal(BinarySearchTreeNode<Type> * perStart)
+void BinarySearchTree<Type> :: preOrderTraversal(BinarySearchTreeNode<Type> * preStart)
 {
     if(preStart != nullptr)
     {
-        postOrderTraversal(postStart->getLeftChild());
-        postOrderTraversal(postStart->getRigthChild());
-        cout << "Node Contents: " << postStart->getNodeData() << endl;
+        cout << "Node Contents: " << preStart->getNdoeData() << endl;
+        inOrderTraversal(preStart->getLeftChild());
+        inOrderTraversal(preStart->getRightChild());
     }
 }
 
 template <class Type>
 void BinarySearchTree<Type> :: postOrderTraversal(BinarySearchTreeNode<Type> * postStart)
 {
-    
+    if(postStart != nullptr)
+    {
+        postOrderTraversal(postStart->getLeftChild());
+        postOrderTraversal(postStart->getRigthChild());
+        cout << "Node Contents: " << postStart->getNodeData() << endl;
+    }
 }
 
 template <class Type>
@@ -369,7 +374,9 @@ bool BinarySearchTree<Type> :: isBalanced()
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete()
 {
-    return isComplete(root);
+    int index = 0;
+    int size = getSize();
+    return isComplete(root, index, size);
 }
 
 template <class Type>
@@ -428,7 +435,21 @@ bool BinarySearchTree<Type> :: isBalanced(BinarySearchTreeNode<Type> * start)
     return false;
 }
 
-
+template <class Type>
+bool BinarySearchTree<Type> :: isCOmplete(BinarySearchTreeNode<Type> * start, int index, int size)
+{
+    if(start == nullptr)
+    {
+        reurn true;
+    }
+    
+    if(index >= size)
+    {
+        return false;
+    }
+    
+    return (isComplete(start->getLeftChild(), index + 1, size) && isComplete(start->getRightChild(), 2 * index + 2, size))
+}
 
 
 
