@@ -36,6 +36,8 @@ private:
     void testCurcularList();
     void testDoubleList();
     void testBinarySearchTreeOperations();
+    void testAVLTreeOperations();
+    void testAVLData();
 public:
     DataStructureController();
     void start();

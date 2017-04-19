@@ -39,7 +39,7 @@ private:
     int year;
 public:
     CrimeData();
-    
+    CrimeData(string currentCSVLine);
     string getDepartment() const;
     int getPopulation() const;
     double getAllPropertyRates() const;

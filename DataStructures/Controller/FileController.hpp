@@ -16,13 +16,17 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-
+#include "../Model/CrimeData.hpp"
+#include "../Model/BinarySearchTree.hpp"
+#include "../Model/AVLTree.hpp"
 using namespace std;
 
 class FileController
 {
 private:
     DoubleList<FoodItem> foodItemList;
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
+    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
 public:
     DoubleList<FoodItem> readDataFromFile(string filename);
 };
