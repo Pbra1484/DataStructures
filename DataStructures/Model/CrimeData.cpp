@@ -8,7 +8,7 @@
 
 #include "CrimeData.hpp"
 #include <cmath>
-
+#include <sStream>
 
 using namespace std;
 
