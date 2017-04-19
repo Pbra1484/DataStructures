@@ -45,7 +45,7 @@ template <class Type>
 BinarySearchTreeNode<Type> :: BinarySearchTreeNode(Type data) : Node<Type>(data)
 {
     this->root = nullptr;
-    this->leftCild = nullptr;
+    this->leftChild = nullptr;
     this->rightChild = nullptr;
 }
 
@@ -58,7 +58,7 @@ BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getRootPointer()
 template <class Type>
 BinarySearchTreeNode<Type> * BinarySearchTreeNode<Type> :: getLeftChild()
 {
-    return this->lefftChild;
+    return this->leftChild;
 }
 
 template <class Type>
