@@ -24,7 +24,7 @@ private:
     
     BinarySearchTreeNode<Type> * balanceSubTree(BinarySearchTreeNode<Type> * parent);
     
-    BinarySearchTreeNode<Type> * insertNode(BinarySearchTreeNode<Type> * parent);
+    BinarySearchTreeNode<Type> * insertNode(BinarySearchTreeNode<Type> * parent, Type inserted);
     BinarySearchTreeNode<Type> * removeNdoe(BinarySearchTreeNode<Type> * parent);
     
     int heightDifference(BinarySearchTreeNode<Type> * parent);
@@ -35,6 +35,23 @@ public:
     void insert(Type itemToInsert);
     void remove(Type value);
 };
+
+template <class Type>
+AVLTree<Type> :: AVLTree()
+{
+    this->root = nullptr;
+}
+
+template <class Type>
+AVLTree<Type> :: ~AVLTree()
+{
+    delete this->getRoot();
+}
+
+
+
+
+
 
 /*
  A negative value means the right is grater than the left
@@ -97,9 +114,57 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: leftRightRotation(BinarySearchTree
     return leftRotaion(parent);
 }
 
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: balanceSubTree(BinarySearchTreeNode<Type> * parent)
+{
+    int balanceFactor = heightDifference(parent);
+    
+    if(balanceFactor > 1)
+    {
+        if(heightDifference(parent->getLeftChild()) > 0)
+        {
+            parent = leftRotation(parent);
+        }
+        else
+        {
+            parent = leftRightRotation(parent);
+        }
+    }
+    else if(balanceFactor < -1)
+    {
+        if(heightDifference(parent->getRightChild()) > 0)
+        {
+            parent = rightLeftRotation(parent);
+        }
+        else
+        {
+            parent = rightRotation(parent);
+        }
+    }
+    
+    return parent;
+}
 
-
-
+template <class Type>
+BinarySearchTreeNode<Type> * AVLTree<Type> :: insertNode(BinarySearchTreeNode<Type> * parent, Type inserted)
+{
+    if(parent == nullptr)
+    {
+        parent = new BinarySearchTreeNode<Type>(inserted);
+        return parent;
+    }
+    else if(inserted < parent->getNodeData())
+    {
+        parent->setLeftCHild(insertNode(parent->getLeftChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    else if(inserted > parent->getNodeData())
+    {
+        parent->setRightChild(inserteNode(parent->getRightChild(), inserted));
+        parent = balanceSubTree(parent);
+    }
+    return parent;
+}
 
 
 
