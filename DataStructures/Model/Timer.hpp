@@ -18,7 +18,7 @@ private:
 public:
     Timer();
     void startTimer();
-    void finishTimer();
+    void stopTimer();
     void resetTimer();
     void displayTimerInformation();
     long getExecutionTimeInMicroseconds();

@@ -25,7 +25,7 @@ private:
     BinarySearchTreeNode<Type> * balanceSubTree(BinarySearchTreeNode<Type> * parent);
     
     BinarySearchTreeNode<Type> * insertNode(BinarySearchTreeNode<Type> * parent, Type inserted);
-    BinarySearchTreeNode<Type> * removeNdoe(BinarySearchTreeNode<Type> * parent);
+    BinarySearchTreeNode<Type> * removeNode(BinarySearchTreeNode<Type> * parent, Type inserted);
     
     int heightDifference(BinarySearchTreeNode<Type> * parent);
 public:
@@ -48,11 +48,6 @@ AVLTree<Type> :: ~AVLTree()
     delete this->getRoot();
 }
 
-
-
-
-
-
 /*
  A negative value means the right is grater than the left
  */
@@ -60,7 +55,7 @@ template <class Type>
 int AVLTree<Type> :: heightDifference(BinarySearchTreeNode<Type> * node)
 {
     int balance;
-    int leftHeight = this->calculateHeight(node->getLEftChild());
+    int leftHeight = this->calculateHeight(node->getLeftChild());
     int rightHeight = this->calculateHeight(node->getRightChild());
     balance = leftHeight - rightHeight;
     return balance;
@@ -87,7 +82,7 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: rightRotation(BinarySearchTreeNode
     
     parent->setRightChild(changedNode->getLeftChild());
     
-    changedNode->setLeftCHild(parent);
+    changedNode->setLeftChild(parent);
     
     return changedNode;
 }
@@ -111,7 +106,7 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: leftRightRotation(BinarySearchTree
     
     parent->setLeftChild(rightRotation(changedNode));
     
-    return leftRotaion(parent);
+    return leftRotation(parent);
 }
 
 template <class Type>
@@ -155,25 +150,68 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: insertNode(BinarySearchTreeNode<Ty
     }
     else if(inserted < parent->getNodeData())
     {
-        parent->setLeftCHild(insertNode(parent->getLeftChild(), inserted));
+        parent->setLeftChild(insertNode(parent->getLeftChild(), inserted));
         parent = balanceSubTree(parent);
     }
     else if(inserted > parent->getNodeData())
     {
-        parent->setRightChild(inserteNode(parent->getRightChild(), inserted));
+        parent->setRightChild(insertNode(parent->getRightChild(), inserted));
         parent = balanceSubTree(parent);
     }
     return parent;
 }
 
-
-template <class Type>
-void AVLTree<Type> :: insert(type item)
+template <class Type> BinarySearchTreeNode<Type> * AVLTree<Type> :: removeNode(BinarySearchTreeNode<Type> * parent, Type inserted)
 {
-    insertedNode(this->getRoot(), item);
+    if(parent == nullptr)
+    {
+        return parent;
+    }
+    if(inserted < parent->getNodeData())
+    {
+        parent->setLeftChild(removeNode(parent->getLeftChild(), inserted));
+    }
+    else if(inserted > parent->getNodeData())
+    {
+        parent->setRightChild(removeNode(parent->getRightChild(), inserted));
+    }
+    else
+    {
+        BinarySearchTreeNode<Type> * temp;
+        if(parent->getLeftChild() == nullptr && parent->getRightChild() == nullptr)
+        {
+            temp = parent;
+            delete temp;
+        }
+        else if(parent->getLeftChild() == nullptr)
+        {
+            *parent = *parent->getRightChild();
+        }
+        else if(parent->getRightChild() == nullptr)
+        {
+            *parent = *parent->getLeftChild();
+        }
+        else
+        {
+            BinarySearchTreeNode<Type> * leftMost = this->getLeftMostChild(parent->getRightChild());
+            parent->setNodeData(leftMost->getNodeData());
+            parent->setRightChild(removeNode(parent->getRightChild(), leftMost->getNodeData()));
+        }
+    }
+    if(parent == nullptr)
+    {
+        return parent;
+    }
+    return balanceSubTree(parent);
 }
 
-template <class TYpe>
+template <class Type>
+void AVLTree<Type> :: insert(Type item)
+{
+    insertNode(this->getRoot(), item);
+}
+
+template <class Type>
 void AVLTree<Type> :: remove(Type item)
 {
     removeNode(this->getRoot(), item);

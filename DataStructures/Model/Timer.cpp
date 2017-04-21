@@ -26,7 +26,7 @@ void Timer :: startTimer()
     executionTime = clock();
 }
 
-void Timer :: finishTimer()
+void Timer :: stopTimer()
 {
     executionTime = clock() - executionTime;
 }

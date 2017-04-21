@@ -25,10 +25,11 @@ class FileController
 {
 private:
     DoubleList<FoodItem> foodItemList;
-    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
-    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
+    
 public:
     DoubleList<FoodItem> readDataFromFile(string filename);
+    BinarySearchTree<CrimeData> readCrimeDataToBinarySearchTree(string filename);
+    AVLTree<CrimeData> readCrimeDataToAVLTree(string filename);
 };
 
 #endif /* FileController_hpp */

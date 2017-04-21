@@ -492,3 +492,8 @@ bool CrimeData :: operator == (const CrimeData & compared)
     return isThisTheSame;
 }
 
+ostream & operator << (ostream &outputStream, const CrimeData & outputData)
+{
+    return outputStream << outputData.getDepartment() << "had " << outputData.getAllViolentRates() << " in year: " << outputData.getYear();
+}
+

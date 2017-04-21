@@ -13,6 +13,7 @@
 #include "../Model/List.hpp"
 #include "../Model/BinarySearchTree.hpp"
 #include "../Model/AVLTree.hpp"
+#include "FileCOntroller.hpp"
 
 
 using namespace std;
@@ -250,7 +251,7 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
 }
 
-void StructureTester :: testBinarySearchData()
+void DataStructureController :: testBinarySearchData()
 
 {
     

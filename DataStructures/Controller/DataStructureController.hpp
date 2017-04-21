@@ -38,6 +38,7 @@ private:
     void testBinarySearchTreeOperations();
     void testAVLTreeOperations();
     void testAVLData();
+    void testBinarySearchData();
 public:
     DataStructureController();
     void start();
