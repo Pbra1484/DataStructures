@@ -167,6 +167,36 @@ BinarySearchTreeNode<Type> * AVLTree<Type> :: insertNode(BinarySearchTreeNode<Ty
 }
 
 
+template <class Type>
+void AVLTree<Type> :: insert(type item)
+{
+    insertedNode(this->getRoot(), item);
+}
+
+template <class TYpe>
+void AVLTree<Type> :: remove(Type item)
+{
+    removeNode(this->getRoot(), item);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
