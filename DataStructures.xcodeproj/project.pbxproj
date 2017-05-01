@@ -55,6 +55,7 @@
 		51D354A61E89A24600CC07EA /* FileController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = FileController.cpp; path = Controller/FileController.cpp; sourceTree = "<group>"; };
 		51D354A71E89A24600CC07EA /* FileController.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = FileController.hpp; path = Controller/FileController.hpp; sourceTree = "<group>"; };
 		51D6FCF81EB7B25F00DAB915 /* HashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = HashTable.hpp; path = Model/HashTable.hpp; sourceTree = "<group>"; };
+		51D6FCF91EB7B4EC00DAB915 /* HashNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = HashNode.hpp; path = Model/HashNode.hpp; sourceTree = "<group>"; };
 		51E455F71E6F45920069CA3A /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Queue.hpp; path = Model/Queue.hpp; sourceTree = "<group>"; };
 		51E455F81E6F4A830069CA3A /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Stack.hpp; path = Model/Stack.hpp; sourceTree = "<group>"; };
 		51EFB1161E675D88007ED6EF /* DoublyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = DoublyLinkedList.hpp; path = Model/DoublyLinkedList.hpp; sourceTree = "<group>"; };
@@ -137,6 +138,7 @@
 				51C3A2731E9D5CFF00576587 /* BinarySearchTree.hpp */,
 				51AF46031EA7EECC0012B457 /* AVLTree.hpp */,
 				51D6FCF81EB7B25F00DAB915 /* HashTable.hpp */,
+				51D6FCF91EB7B4EC00DAB915 /* HashNode.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";

@@ -23,7 +23,7 @@ private:
     double efficencyPercentage;
     HashNode<type> * * hashTableStorage;
     bool isPrime(long sampleNumber);
-    coid  resize();
+    void  resize();
     long nextPrime(long current);
     longe findPosition(HashNode<Type> * data);long hadleCollision(HashNOde<Type> * data, long currentPosition);
 public:
@@ -31,7 +31,22 @@ public:
     ~HashTable();
     coid add(Type data);
     bool remove(Type data);
-    void displayCOntents();
+    void displayContents();
 };
+
+template <class TYpe>
+HashTable<Type> :: HashTable()
+{
+    this->capacity = 101;
+    this->eggicencyPercentage = .667;
+    this->size = 0;
+    this->hashTableStorage = HashNode<Type> * [capacity];
+}
+
+template <class Type>
+HashTable<Type> :: ~HashTable()
+{
+    delete [] hashTableStorage;
+}
 
 #endif /* HashTable_h */
