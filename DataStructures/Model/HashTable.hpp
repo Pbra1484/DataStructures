@@ -24,12 +24,12 @@ private:
     HashNode<type> * * hashTableStorage;
     bool isPrime(long sampleNumber);
     void resize();
-    long nextPrime(long current);
+    long nextPrime();
     longe findPosition(HashNode<Type> * data);long hadleCollision(HashNOde<Type> * data, long currentPosition);
 public:
     HashTable();
     ~HashTable();
-    coid add(Type data);
+    void add(Type data);
     bool remove(Type data);
     void displayContents();
     int getSize();
@@ -91,7 +91,7 @@ bool HashTable<Type> :: isPrime(long candidateNumber)
 }
 
 template <class Type>
-long HashTable<Type> :: f indPostion(HashNode<Type> * data)
+long HashTable<Type> :: findPostion(HashNode<Type> * data)
 {
     long insertPosistion = data->getKey() % this->capacity;
     return insertPosition;
@@ -130,8 +130,6 @@ void HashTable<Type> :: displayContents()
     }
 }
 
-
-
 template <class Type>
 int HashTable<Type> :: getSize()
 {
@@ -155,7 +153,6 @@ bool HashTable<Type> :: remove(Type data)
     
     return removed;
 }
-
 
 template <class Type>
 void HashTable<Type> :: resize()
