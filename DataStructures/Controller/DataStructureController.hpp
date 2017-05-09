@@ -12,7 +12,7 @@
 #include "../Model/Node.hpp"
 #include "../Model/Array.hpp"
 #include "../Model/FoodItem.hpp"
-
+#include "../Model/Graph.hpp"
 #include "../Model/Stack.hpp"
 #include "../Model/Queue.hpp"
 #include "../Model/CircularList.hpp"
