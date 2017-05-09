@@ -42,7 +42,8 @@ void DataStructureController :: start()
 //    testCurcularList();
 //    testDoubleList();
 //    testIntStack();
-    testList();
+//    testList();
+    testBinarySearchTreeOperations();
     cout << "Finished Testing" << endl;
 }
 
@@ -212,7 +213,6 @@ void DataStructureController :: testDoubleList()
 }
 
 void DataStructureController :: testBinarySearchTreeOperations()
-
 {
     
     BinarySearchTree<int> numbers;
@@ -221,11 +221,16 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
     numbers.insert(10);
     
+    cout << "Size should be 2 and is: " << numbers.getSize() << endl;
+
+    
     numbers.insert(43);
     
     numbers.insert(-123);
     
     numbers.insert(23465);
+    
+    cout << "Size should be 5 and is: " << numbers.getSize() << endl;
     
     numbers.insert(10); // won't go in
     
@@ -243,7 +248,11 @@ void DataStructureController :: testBinarySearchTreeOperations()
     
     numbers.inOrderTraversal();
     
+    numbers.postOrderTraversal();
     
+    numbers.remove(43);
+    
+    numbers.preOrderTraversal();
     
     cout << "Height should be 4 and is: " << numbers.getHeight() << endl;
     
