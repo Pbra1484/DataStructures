@@ -39,6 +39,7 @@ private:
     void testAVLTreeOperations();
     void testAVLData();
     void testBinarySearchData();
+    void testGraph();
 public:
     DataStructureController();
     void start();

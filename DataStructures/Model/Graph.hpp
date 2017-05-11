@@ -51,8 +51,7 @@ Graph<Type> :: Graph()
 template <class Type>
 Graph<Type> :: ~Graph()
 {
-    delete [] this->adjecencymatrix;
-    delete [] this->graphData;
+
 }
 
 template <class Type>
@@ -139,7 +138,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {
     bool visitedVertices[MAXIMUM];
     assert(vertex < currentGraph.size());
-    std::fill_n(visitedVertices, currentGraph.size, false);
+    std::fill_n(visitedVertices, currentGraph.size(), false);
     depthFirstTraversal(currentGraph, vertex, visitedVertices);
 }
 

@@ -43,7 +43,8 @@ void DataStructureController :: start()
 //    testDoubleList();
 //    testIntStack();
 //    testList();
-    testBinarySearchTreeOperations();
+//    testBinarySearchTreeOperations();
+    testGraph();
     cout << "Finished Testing" << endl;
 }
 
@@ -297,7 +298,6 @@ void DataStructureController :: testBinarySearchData()
 }
 
 void DataStructureController :: testAVLTreeOperations()
-
 {
     
     AVLTree<int> numbers;
@@ -336,9 +336,7 @@ void DataStructureController :: testAVLTreeOperations()
     
 }
 
-
 void DataStructureController :: testAVLData()
-
 {
     
     FileController fileData;
@@ -370,5 +368,27 @@ void DataStructureController :: testAVLData()
     treeTimer.displayTimerInformation();
 }
 
-
+void DataStructureController :: testGraph()
+{
+    Graph<string> words;
+    
+    words.addVertex("number");
+    words.addVertex("one");
+    words.addVertex("two");
+    words.addVertex("three");
+    words.addVertex("Three.4");
+    words.addVertex("Thre.453");
+    
+    
+    
+    words.addEdge(0,1);
+    words.addEdge(0,2);
+    words.addEdge(0,3);
+    words.addEdge(3,4);
+    words.addEdge(3,5);
+    
+    
+    words.breadthFirstTraversal(words, 0);
+    words.depthFirstTraversal(words, 0);
+}
 
