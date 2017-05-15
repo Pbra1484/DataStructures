@@ -42,24 +42,28 @@ public:
 template <class Type>
 const int Graph<Type> :: MAXIMUM;
 
+//constructor
 template <class Type>
 Graph<Type> :: Graph()
 {
     this->vertexCount = 0;
 }
 
+//destructor of greatness
 template <class Type>
 Graph<Type> :: ~Graph()
 {
 
 }
 
+//returns the number of vertexes
 template <class Type>
 int Graph<Type> :: size() const
 {
     return vertexCount;
 }
 
+//adds a vertex and set the agesensy to false
 template <class Type>
 void Graph<Type> :: addVertex(const Type& value)
 {
@@ -75,7 +79,7 @@ void Graph<Type> :: addVertex(const Type& value)
     graphData[newVertexNumber] = value;
 }
 
-
+//checks if two nodes are conected
 template <class Type>
 bool Graph<Type> :: areConected(int source, int target) const
 {
@@ -87,6 +91,7 @@ bool Graph<Type> :: areConected(int source, int target) const
     return isAnEdge;
 }
 
+//overrides the set operator
 template <class Type>
 Type& Graph<Type> :: operator[](int vertex)
 {
@@ -94,6 +99,7 @@ Type& Graph<Type> :: operator[](int vertex)
     return graphData[vertex];
 }
 
+//overrides the get operator
 template <class Type>
 Type Graph<Type> :: operator[](int vertex) const
 {
@@ -101,7 +107,7 @@ Type Graph<Type> :: operator[](int vertex) const
     return graphData[vertex];
 }
 
-
+//retruns a set of the neigboring vertexes
 template <class Type>
 std::set<int> Graph<Type> :: neighbors(int vertex) const
 {
@@ -118,6 +124,7 @@ std::set<int> Graph<Type> :: neighbors(int vertex) const
     return vertexNeighbors;
 }
 
+//removes the an edge  between two vertexes
 template <class Type>
 void Graph<Type> :: removeEdge(int source, int target)
 {
@@ -125,6 +132,7 @@ void Graph<Type> :: removeEdge(int source, int target)
     adjacencyMatrix[source][target] = false;
 }
 
+//adds an edge between  two vetexes
 template <class Type>
 void Graph<Type> :: addEdge(int source, int target)
 {
@@ -133,6 +141,7 @@ void Graph<Type> :: addEdge(int source, int target)
     adjacencyMatrix[source][target] = true;
 }
 
+//traverses the closes vertexes first
 template <class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {
@@ -142,6 +151,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex)
     depthFirstTraversal(currentGraph, vertex, visitedVertices);
 }
 
+//Recersive helper method for depthFirst
 template <class Type>
 void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bool * visited)
 {
@@ -159,6 +169,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> currentGraph, int vertex, bo
     }
 }
 
+//traverses the farthest vertexes first
 template <class Type>
 void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
 {
@@ -188,25 +199,4 @@ void Graph<Type> :: breadthFirstTraversal(Graph<Type> currentGraph, int vertex)
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #endif /* Graph_h */
