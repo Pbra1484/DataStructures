@@ -21,11 +21,12 @@ private:
     long capacity;
     long size;
     double efficencyPercentage;
-    HashNode<type> * * hashTableStorage;
+    HashNode<Type> * * hashTableStorage;
     bool isPrime(long sampleNumber);
     void resize();
     long nextPrime();
-    longe findPosition(HashNode<Type> * data);long hadleCollision(HashNOde<Type> * data, long currentPosition);
+    long findPosition(HashNode<Type> * data);
+    long hadleCollision(HashNode<Type> * data, long currentPosition);
 public:
     HashTable();
     ~HashTable();
@@ -210,19 +211,5 @@ void HashTable<Type> :: add(Type data)
         hashTableStorage[updatedPosition] = temp;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif /* HashTable_h */
