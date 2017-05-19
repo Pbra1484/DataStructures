@@ -17,7 +17,7 @@ private:
     long key;
 public:
     HashNode();
-    HashNode();
+    HashNode(Type data);
     
     Type getData();
     long getKey() const;
@@ -25,7 +25,7 @@ public:
 };
 
 template <class Type>
-HashNode<TYpe> :: HashNode()
+HashNode<Type> :: HashNode()
 {
     this->key = rand();
 }
@@ -44,13 +44,13 @@ long HashNode<Type> :: getKey() const
 }
 
 template <class Type>
-Type HashNode<TYpe> :: getData()
+Type HashNode<Type> :: getData()
 {
     return this->data;
 }
 
 template <class Type>
-void HashNode<Type> :: setData(TYpe data)
+void HashNode<Type> :: setData(Type data)
 {
     this->data = data;
 }

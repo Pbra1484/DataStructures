@@ -13,8 +13,8 @@
 #include "../Model/List.hpp"
 #include "../Model/BinarySearchTree.hpp"
 #include "../Model/AVLTree.hpp"
-#include "FileCOntroller.hpp"
-
+#include "FileController.hpp"
+#include "../Model/HashTable.hpp"
 
 using namespace std;
 DataStructureController :: DataStructureController()
@@ -44,7 +44,8 @@ void DataStructureController :: start()
 //    testIntStack();
 //    testList();
 //    testBinarySearchTreeOperations();
-    testGraph();
+//    testGraph();
+    testHashTable();
     cout << "Finished Testing" << endl;
 }
 
@@ -392,3 +393,22 @@ void DataStructureController :: testGraph()
     words.depthFirstTraversal(words, 0);
 }
 
+void DataStructureController :: testHashTable()
+{
+    HashTable<string> table;
+    
+    table.add("one");
+    table.add("two");
+    table.add("three");
+    table.add("four");
+    table.add("five");
+    table.add("six");
+    table.add("seven");
+    table.add("eight");
+    table.add("nine");
+    table.add("ten");
+    
+    table.displayContents();
+    
+    
+}

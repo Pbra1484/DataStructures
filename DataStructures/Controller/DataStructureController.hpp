@@ -40,6 +40,7 @@ private:
     void testAVLData();
     void testBinarySearchData();
     void testGraph();
+    void testHashTable();
 public:
     DataStructureController();
     void start();
